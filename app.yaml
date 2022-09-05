@@ -1,0 +1,19 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+handlers:
+  - url: /
+    static_files: dist/pictures-gcp/index.html
+    upload: dist/pictures-gcp/index.html
+  - url: /
+    static_dir: dist/pictures-gcp
+skip_files:
+  - e2e/
+  - node_modules/
+  - src/
+  - coverage
+  - ^(.*/)?\..*$
+  - ^(.*/)?.*\.json$
+  - ^(.*/)?.*\.md$
+  - ^(.*/)?.*\.yaml$
+  - ^LICENSE
